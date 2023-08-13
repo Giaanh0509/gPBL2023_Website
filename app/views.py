@@ -45,7 +45,7 @@ def category(request) :
     active_category = request.GET.get('category','')
     if active_category:
         products = Product.objects.filter(category__slug = active_category)
-    context = {'categories' : categories,'products' : products ,'active_category' : active_category}
+    context = {'categories' : categories ,'active_category' : active_category}
     return render(request,'app/category.html',context)
 
 

@@ -78,11 +78,8 @@ WSGI_APPLICATION = 'webbanhang.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'sitesale',
-        'USER' : 'root' , 
-        'PASSWORD' : 'Giaanh0509' ,
-        'HOST': 'localhost' 
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME' : BASE_DIR / 'db.sqlite3' , 
     }
 }
 
@@ -110,29 +107,21 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 348172940ba9c855a6e726ae65880db4294ac245
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-STATICFILES = ( 
+STATICFILES = [ 
     os.path.join(BASE_DIR, 'static')                
-) 
+]
 
-<<<<<<< HEAD
 
-MEDIA_URL = '/media/'
-STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-MEDIA_ROOT = os.path.join(BASE_DIR,'app/static/images')
-=======
 MEDIA_URL = '/images/'
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_ROOT = os.path.join(BASE_DIR,'app/static/images')
->>>>>>> 348172940ba9c855a6e726ae65880db4294ac245
+
+
