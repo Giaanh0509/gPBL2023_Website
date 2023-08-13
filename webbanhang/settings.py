@@ -29,6 +29,7 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -77,8 +78,11 @@ WSGI_APPLICATION = 'webbanhang.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'sitesale',
+        'USER' : 'root' , 
+        'PASSWORD' : 'Giaanh0509' ,
+        'HOST': 'localhost' 
     }
 }
 
@@ -106,7 +110,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
@@ -117,6 +121,8 @@ STATICFILES = (
     os.path.join(BASE_DIR, 'static')                
 ) 
 
-MEDIA_URL = '/images/'
 
+MEDIA_URL = '/media/'
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_ROOT = os.path.join(BASE_DIR,'app/static/images')
